@@ -14,7 +14,7 @@ module.exports = {
     },
     dev: {
         env: '"dev"', //环境变量
-        port: 8001, //端口号
+        port: {{port}}, //端口号
         autoOpenBrowser: true, //是否自动打开浏览器
         assetsSubDirectory: '', //生成资源路径二级
         assetsPublicPath: '', //生成资源路径

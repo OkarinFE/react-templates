@@ -3,27 +3,27 @@ module.exports = {
         "name": {
             "type": "string",
             "required": false,
-            "message": "Project name",
+            "message": "项目名称",
             "default": "react-project"
         },
         "author": {
             "type": "string",
-            "message": "Author"
+            "message": "项目作者"
         },
         "version": {
             "type": "string",
-            "message": "Project version",
+            "message": "项目版本",
             "default": "0.0.1"
         },
         "description": {
             "type": "string",
             "required": false,
-            "message": "Project description",
+            "message": "项目描述",
             "default": "A new React project"
         },
         "state": {
             "type": "list",
-            "message": "state manage for your app",
+            "message": "状态管理选择",
             "choices": [
                 {
                     "name": "Mobx (https://github.com/mobxjs/mobx)",
@@ -40,14 +40,19 @@ module.exports = {
         "port": {
             "type": "string",
             "required": false,
-            "message": "client port",
+            "message": "默认端口号",
             "default": 3000
         },
-        "prefix": {
+        "react-version": {
             "type": "string",
             "required": false,
-            "message": "the host name for Ajax request",
-            "default": ''
+            "message": "react版本",
+            "default": '^16.3.2'
+        },
+        "decorators": {
+            when: 'isNotTest',
+            "type": 'confirm',
+            "message": "是否使用装饰器",
         }
     },
     "filters": {
