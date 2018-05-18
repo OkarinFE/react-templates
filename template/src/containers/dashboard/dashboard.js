@@ -16,22 +16,22 @@ const mapDispatchToProps = dispatch => ({
 @connect(mapStateToProps, mapDispatchToProps)
 class Dashboard extends React.Component {
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.dashboardRequest();
     }
 
     render() {
-        const {dashboard} =this.props;
-        const {cardList} = dashboard;
+        const { dashboard } = this.props;
+        const { cardList } = dashboard;
         return (
             <div>
                 <Row gutter={16}>
                     {
-                        cardList.map((item,idx)=>{
+                        cardList.map((item, idx) => {
                             return (
                                 <Col key={idx} span={6}>
                                     <Card title={item.name} bordered={false}>
-                                        <span style={{fontSize:'40px'}} >{item.value}</span>
+                                        <span>{item.value}</span>
                                     </Card>
                                 </Col>
                             );
