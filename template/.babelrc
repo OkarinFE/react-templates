@@ -2,8 +2,8 @@
   "presets": ["env", "stage-0", "react"],
   "plugins": [
     "react-hot-loader/babel",
-    {{#async}}"transform-runtime"{{/async}}, 
-    {{#decorators}}"transform-decorators-legacy"{{/decorators}}, 
+    {{#async}}"transform-runtime", {{/async}}
+    {{#decorators}}"transform-decorators-legacy", {{/decorators}}
     ["import", {
       "libraryName": "antd",
       "libraryDirectory": "es",
