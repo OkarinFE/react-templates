@@ -21,7 +21,7 @@ const mapDispatchToProps = dispatch => ({
 class Login extends React.Component {
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.login.data&&nextProps.login.data.code == 200) {
+        if (nextProps.login.data && nextProps.login.data.code == 200) {
             message.success(nextProps.login.data.msg);
             this.props.history.push('/');
         }
@@ -48,21 +48,21 @@ class Login extends React.Component {
                             {getFieldDecorator('name', {
                                 rules: [{ required: true, message: '请输入用户名!' }],
                             })(
-                                <Input prefix={<Icon type="user" style={{ color: 'rgba(0, 0, 0, .25)' }} />} placeholder="admin" />
+                                <Input prefix={<Icon type="user" />} placeholder="admin" />
                             )}
                         </FormItem>
                         <FormItem>
                             {getFieldDecorator('password', {
                                 rules: [{ required: true, message: '请输入密码!' }],
                             })(
-                                <Input prefix={<Icon type="lock" style={{ color: 'rgba(0, 0, 0, .25)' }} />} type="password" placeholder="123456" />
+                                <Input prefix={<Icon type="lock" />} type="password" placeholder="123456" />
                             )}
                         </FormItem>
                         <FormItem>
                             <Button type="primary" htmlType="submit" className="btn-login">登 录</Button>
                         </FormItem>
-                        <FormItem className={error==null ? 'vh' : 'vv'} >
-                            <Alert message={error&&error.msg} type="error" showIcon />
+                        <FormItem className={error == null ? 'vh' : 'vv'} >
+                            <Alert message={error && error.msg} type="error" showIcon />
                         </FormItem>
                     </Form>
                 </Col>
