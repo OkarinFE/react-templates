@@ -21,22 +21,6 @@ module.exports = {
             "message": "项目描述",
             "default": "A new React project"
         },
-        "state": {
-            "type": "list",
-            "message": "状态管理选择",
-            "choices": [
-                {
-                    "name": "Mobx (https://github.com/mobxjs/mobx)",
-                    "value": "mobx",
-                    "short": "mobx"
-                },
-                {
-                    "name": "Redux (https://github.com/reactjs/redux)",
-                    "value": "redux",
-                    "short": "redux"
-                }
-            ]
-        },
         "port": {
             "type": "string",
             "required": false,
@@ -48,11 +32,6 @@ module.exports = {
             "required": false,
             "message": "react版本",
             "default": '^16.3.2'
-        },
-        "decorators": {
-            when: 'isNotTest',
-            "type": 'confirm',
-            "message": "是否使用装饰器",
         }
     },
     "filters": {
