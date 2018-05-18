@@ -32,7 +32,15 @@ module.exports = {
             "required": false,
             "message": "react版本",
             "default": '^16.3.2'
-        }
+        },
+        "async": {
+            type: 'confirm',
+            message: '是否使用async/await',
+        },
+        "decorators": {
+            type: 'confirm',
+            message: '是否使用装饰器',
+        },
     },
     "filters": {
         "src/redux/**/*": "state === 'redux'",
