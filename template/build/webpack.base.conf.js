@@ -12,11 +12,13 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.json', '.css', '.less'], //不支持空
         alias: {
-            actions: `${settings.common.srcPath}/actions/`,
-            components: `${settings.common.srcPath}/components/`,
-            containers: `${settings.common.srcPath}/containers/`,
-            reducers: `${settings.common.srcPath}/reducers/`,
-            sagas: `${settings.common.srcPath}/sagas/`
+            {{#redux}}
+            actions: `${settings.common.srcPath}/redux/actions/`,
+            components: `${settings.common.srcPath}/redux/components/`,
+            containers: `${settings.common.srcPath}/redux/containers/`,
+            reducers: `${settings.common.srcPath}/redux/reducers/`,
+            sagas: `${settings.common.srcPath}/redux/sagas/`
+            {{/redux}}
         }
     },
     module: {
