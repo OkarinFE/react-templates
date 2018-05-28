@@ -41,10 +41,13 @@ module.exports = {
             type: 'confirm',
             message: '是否使用装饰器',
         },
+        "redux": {
+            type: 'confirm',
+            message: '是否使用redux',
+        },
     },
     "filters": {
-        "src/redux/**/*": "state === 'redux'",
-        "src/mobx/**/*": "state === 'mobx'"
+        "src/redux/**/*": "redux",
     },
     "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dll\n  npm run dev\n\nDocumentation can be found at https://github.com/dwqs/react-startup"
 }
