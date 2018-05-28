@@ -21,12 +21,14 @@ module.exports = {
     },
     module: {
         rules: [
+            {{#eslint}}
             {
                 test: /\.(js|jsx)$/,
                 enforce: 'pre',
                 include: settings.common.srcPath,
                 use: 'eslint-loader'
             },
+            {{/eslint}}
             {
                 test: /\.(js|jsx)$/,
                 use: 'babel-loader',

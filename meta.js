@@ -45,9 +45,15 @@ module.exports = {
             type: 'confirm',
             message: '是否使用redux',
         },
+        "eslint": {
+            type: 'confirm',
+            message: '是否使用eslint',
+        },
     },
     "filters": {
         "src/redux/**/*": "redux",
+        ".eslintignore": "eslint",
+        ".eslintrc.js": "eslint",
     },
     "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dll\n  npm run dev\n\nDocumentation can be found at https://github.com/dwqs/react-startup"
 }
